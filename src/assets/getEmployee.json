@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "departmentId": 1,
+      "firstName": "revan",
+      "lastName": "kale",
+      "department": "Sales",
+      "gender": "Male",
+      "email": "revan@gmail.com",
+      "phoneNo": "1234567890"
+    },
+    {
+      "departmentId": 2,
+      "firstName": "maya",
+      "lastName": "devi",
+      "department": "Marketing",
+      "gender": "Female",
+      "email": "maya@gmail.com",
+      "phoneNo": "1234567890"
+    },
+    {
+      "departmentId": 3,
+      "firstName": "rahul",
+      "lastName": "daravid",
+      "department": "Rnd",
+      "gender": "Male",
+      "email": "rahul@gmail.com",
+      "phoneNo": "1234567890"
+    },
+    {
+      "departmentId": 4,
+      "firstName": "mahender",
+      "lastName": "dhoni",
+      "department": "Admin",
+      "gender": "Male",
+      "email": "mahi@gmail.com",
+      "phoneNo": "1234567890"
+    }
+  ]
+}
