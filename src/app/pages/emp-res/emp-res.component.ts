@@ -15,6 +15,16 @@ export class EmpResComponent implements OnInit {
 
   isListView: boolean = true;
 
+  employeeObj: any = {
+    "departmentId": 1,
+    "firstName": "",
+    "lastName": "",
+    "department": "",
+    "gender": "",
+    "email": "",
+    "phoneNo": ""
+  }
+
   constructor(private http: HttpClient) {
 
   }
@@ -32,9 +42,30 @@ export class EmpResComponent implements OnInit {
 
   loadEmployee() {
     this.http.get("assets/getEmployee.json").subscribe((res: any) => {
-      debugger;
       this.employeeArray = res.data;
     })
   }
 
+  onCreateEmp() {
+    // this.http.post("assets/postEmployee.json", this.employeeObj).subscribe((res: any) => {
+    //   alert(res.massege);
+    //   this.loadEmployee()
+    debugger;
+    this.http.get("assets/postEmployee.json").subscribe((res: any) => {
+      alert(res.massege);
+      this.loadEmployee()
+    })
+  }
+
+  onEdit(item: any) {
+    this.employeeObj = item;
+    this.isListView = false;
+  }
+
+  onDelete(item: any) {
+    this.http.get("assets/deleteEmployee.json").subscribe((res: any) => {
+      alert(res.massege);
+      this.loadEmployee()
+    })
+  }
 }
