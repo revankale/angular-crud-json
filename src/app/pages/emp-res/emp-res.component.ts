@@ -53,6 +53,7 @@ export class EmpResComponent implements OnInit {
     debugger;
     this.http.get("assets/postEmployee.json").subscribe((res: any) => {
       alert(res.massege);
+      this.onReset();
       this.loadEmployee()
     })
   }
@@ -67,5 +68,17 @@ export class EmpResComponent implements OnInit {
       alert(res.massege);
       this.loadEmployee()
     })
+  }
+
+  onReset() {
+    this.employeeObj = {
+      "departmentId": 1,
+      "firstName": "",
+      "lastName": "",
+      "department": "",
+      "gender": "",
+      "email": "",
+      "phoneNo": ""
+    }
   }
 }
